@@ -2,10 +2,11 @@ from flask import Flask, request
 import telegram
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 
-app = Flask(_name_)
+app = Flask(__name__)
 
 # Replace 'YOUR_BOT_TOKEN' with the token provided by the BotFather
 TOKEN = '7049373526:AAFn3M07oWdImldj7iZAus7hhVZefW6NPYo'
+
 bot = telegram.Bot(token=TOKEN)
 
 def start(update, context):
@@ -33,7 +34,3 @@ def webhook():
     update = telegram.Update.de_json(request.get_json(force=True), bot)
     setup_bot().dispatcher.process_update(update)
     return 'OK'
-
-if _name_ == '_main_':
-    setup_bot()
-    app.run()
