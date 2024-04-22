@@ -7,7 +7,3 @@ name = "pypi"
 flask = "==2.1.2"
 python-telegram-bot = "==13.14"
 
-[dev-packages]
-
-[requires]
-python_version = "3.9"
