@@ -1,3 +1,3 @@
 flask==2.1.2
 python-telegram-bot==13.14
-werkzueg
+werkzueg==2.0.3
